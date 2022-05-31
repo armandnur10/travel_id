@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_id/page/category/categorypage.dart';
 import 'package:travel_id/page/home/homepage.dart';
@@ -68,31 +69,17 @@ class _BodyHomeState extends State<BodyHome> {
         child: 
       body.elementAt(_selectedNavBar),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-      backgroundColor: Colors.white,
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home,),
-          label: "o"
-        ),
-
-        BottomNavigationBarItem(
-          icon: Icon(Icons.category_outlined,),
-          label: "o"
-          
-        ),
-
-        BottomNavigationBarItem(
-          icon: Icon(Icons.account_circle_rounded,),
-          label: "o"
-          
-        ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
+        color: Colors.blueAccent,
+        items: [
+          Icon(Icons.home, color: Colors.white, size: 30,),
+          Icon(Icons.category, color: Colors.white, size: 30,),
+          Icon(Icons.person, color: Colors.white, size: 30,)
       ],
-      showUnselectedLabels: false,
-      selectedItemColor: const Color(0xFF019AFA),
-      currentIndex: _selectedNavBar,
-      unselectedItemColor: Colors.grey[400],
       onTap: _changeSelectedNavBar,
+      animationCurve: Curves.easeInOutBack,
+      
     )
     );
   }

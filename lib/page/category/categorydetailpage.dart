@@ -25,7 +25,7 @@ class _CategoryDetailPageState extends State<CategoryDetailPage> {
         ),
         body: SingleChildScrollView(
             child: Container(
-          height: MediaQuery.of(context).size.height - 120,
+          height: MediaQuery.of(context).size.height - MediaQuery.of(context).size.height * 0.1,
           child: ListView.builder(
             itemCount: widget.item.length,
             itemBuilder: (context, index) {
