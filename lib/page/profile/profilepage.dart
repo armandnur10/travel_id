@@ -28,7 +28,8 @@ class _ProfilePageState extends State<ProfilePage> {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
-        body: SingleChildScrollView(
+        body: SafeArea(
+          child: SingleChildScrollView(
           child: Center(
             child: Column(
               children: [
@@ -96,7 +97,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 
               ),
               Container(
-                margin: EdgeInsets.symmetric(vertical: 20),
+                margin: EdgeInsets.only(bottom: 100, top: 20),
                 height: 100,
                 width: MediaQuery.of(context).size.width - 30,
                 decoration: BoxDecoration(
@@ -123,6 +124,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ],
             ),
           ),
+        ),
         )
       ),
     );
