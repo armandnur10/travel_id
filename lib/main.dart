@@ -65,6 +65,7 @@ class _BodyHomeState extends State<BodyHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: Center(
         child: 
       body.elementAt(_selectedNavBar),
