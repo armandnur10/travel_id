@@ -24,6 +24,11 @@ class CategoryCard extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
+              boxShadow: [BoxShadow(
+                color: Colors.black26,
+                offset: Offset(1, 2),
+                blurRadius: 4
+              )],
               image: DecorationImage(
                 image: AssetImage(category.imagePlace),
                 fit: BoxFit.cover),
